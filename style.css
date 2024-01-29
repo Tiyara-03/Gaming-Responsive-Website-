@@ -1,4 +1,71 @@
 *{
     padding: 0;
     margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    
+}
+
+header{
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: transparent;
+
+
+}
+
+/* body{
+    background-color: red;
+} */
+
+.logo
+{
+    font-size:30px ;
+    font-weight: 700;
+    color: white;
+}
+
+.navlist{
+    display: flex;
+}
+
+.navlist a{
+    color: white;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all 2s ease;
+}
+
+.navlist a :hover{
+    border-bottom: 2px solid white;
+
+}
+
+#menu-icon{
+    color: white;
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+
+}
+
+.hero{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: Linear-gradient(245.59deg, #4d5195 0%, #383f70 28.53%, #131d39 75.52%);
+    position: relative;
+    display: grid;
 }

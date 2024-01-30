@@ -65,7 +65,101 @@ header{
     height: 100%;
     width: 100%;
     min-height: 100vh;
-    background: Linear-gradient(245.59deg, #4d5195 0%, #383f70 28.53%, #131d39 75.52%);
+    /* background: Linear-gradient(245.59deg, #4d5195 0%, #383f70 28.53%, #131d39 75.52%); */
+    
+    background: Linear-gradient(245.59deg, #bec0de 0%, #7f87bb 28.53%, #24408f 75.52%);
     position: relative;
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+section{
+    padding: 0 14%;
+}
+
+/* .hero-text{
+    height: 280px;
+} */
+
+.hero-text h5{
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 27px;
+}
+
+.hero-text h1{
+    font-family: 'Black Ops One', system-ui;
+    /* font-family: 'Permanent Marker', cursive; */
+    font-size: 50px;
+    line-height: 1;
+    color: white;
+    margin: 0 0 45px;
+
+}
+.hero-text h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.hero-text p{
+    color: white;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+
+}
+
+.hero-img img{
+    width: 400px;
+    height: 400px;
+}
+
+.hero-text a{
+    display: inline-block;
+    color: white;
+    background: #616dbe;
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    font-size:14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .55s ease;
+}
+
+.hero-text a:hover{
+    background:transparent ;
+    border: 1px solid white;
+    transform: translate(8px);
+}
+
+.hero-text a.ctaa{
+    background: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.hero-text a.ctaa i{
+    vertical-align: middle;
+    margin-right:  5px;
+}
+
+.icons{
+    position: absolute;
+    top: 50%;
+    padding: 0 9%;
+    transform: translateY(-50%);
+}
+
+.icons i{
+    display: block;
+    margin: 26px 0;
+    font-size: 24px;
+    color: white;
+    transition: all .55s ease;
 }

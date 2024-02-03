@@ -54,6 +54,7 @@ header{
 
 #menu-icon{
     color: white;
+    position: relative;
     font-size: 35px;
     z-index: 10001;
     cursor: pointer;
@@ -77,6 +78,8 @@ header{
 
 section{
     padding: 0 14%;
+    /* position: fixed;
+    display: flex; */
 }
 
 /* .hero-text{
@@ -96,21 +99,21 @@ section{
     font-size: 50px;
     line-height: 1;
     color: white;
-    margin: 0 0 45px;
+    margin: 0 0 24px;
 
 }
 .hero-text h4{
     font-size: 18px;
     font-weight: 600;
     color: white;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .hero-text p{
     color: white;
     font-size: 15px;
     line-height: 1.9;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 
 }
 
@@ -124,8 +127,9 @@ section{
     color: white;
     background: #616dbe;
     border: 1px solid transparent;
-    padding: 12px 30px;
-    font-size:14px;
+    padding: 12px 25px;
+    line-height: 1.4 ;
+    font-size:15px;
     font-weight: 500;
     border-radius: 30px;
     text-transform: uppercase;
@@ -163,3 +167,173 @@ section{
     color: white;
     transition: all .55s ease;
 }
+
+.icons i:hover{
+    color: #24408f;
+    transform: translateY(-5px);
+}
+
+.scroll-down{
+    position: absolute;
+    bottom: 6%;
+    right: 9%;
+
+}
+
+.scroll-down i{
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    color: white;
+    background: #24408f;
+    border-radius: 30px;
+    transition: all .55s ease;
+}
+
+.scroll-down i:hover{
+    transform: translateY(-5px);
+}
+
+@media (max-width: 1240px){
+    header{
+        padding: 15px 3%;
+        transition: .2s;
+    }
+
+    section{
+        padding: 0 10%;
+        transition: .2s;
+    }
+
+    .scroll-down{
+        right: 3%;
+        transition: .2s;
+    }
+
+    .icons{
+        padding: 0 3%;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 995px) {
+    .hero-text a{
+        padding: 12px 15px;
+        font-size: 12px;
+        transition: .2s;
+    }
+
+    .hero-text a ctaa{
+        margin-left: 10px;
+        transition: .2s;
+    }
+
+    .hero-img img{
+        width: 100%;
+        height: auto;
+        transition: .2s;
+    }
+
+    .navlist a{
+        margin-left: 45px;
+        transition: .2s;
+    }
+
+    .hero-text h1{
+        font-size: 45px;
+        margin: 0 0 20px;
+        transition: .2s;
+    }
+
+    .hero-text h5{
+        margin-bottom: 20px;
+        transition: .2s;
+    }
+
+    .hero-text p{
+        line-height: 1.7;
+        margin-bottom: 15px;
+        font-size: 14px;
+        transition: .2s;
+
+
+    }
+}
+
+@media (max-width: 860px) {
+    section{
+        padding: 0 3%;
+        transition: .2s;
+    }
+
+    .hero-text{
+        padding-top: 115px;
+        padding-left: 40px;
+    }
+
+    .hero-img{
+        text-align: center;
+    }
+
+    .hero-img img{
+        width: 400px;
+        height: auto;
+    }
+    .hero{
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .icons{
+        display: none;
+    }
+
+    .scroll-down{
+        display: none;
+    }
+}
+
+@media (max-width: 860px) {
+    #menu-icon{
+        display: block;
+
+    }
+
+    .navlist{
+        position: absolute;
+        top: 100%;
+        /* right: -100%; */
+        right: 0;
+        width: 300px;
+        height: 60vh;
+        background:#bec0de ;
+        /* background-color: Linear-gradient(245.59deg, #bec0de 0%, #7f87bb 2l8.53%, #24408f 75.52%); */
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 20px;
+        transition: all .55s ease;
+    }
+
+    .navlist a{
+        margin-left: 0px;
+        display: block;
+        margin: 15px 91px;
+        /* transition: .2s ease; */
+    }
+
+    .navlist .open{
+        right: 0;
+    }
+
+}
+
+@media(max-width:412px ) {
+    .hero-img img{
+        width: 100%; 
+        height: auto;
+    }
+    
+}
+

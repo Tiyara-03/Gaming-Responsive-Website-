@@ -1,35 +1,32 @@
-console.log("hello world");
+const express = require("express");
+const path = require("path");
+const fs = require("fs");
+const port = 8000;
+const app = express();
 
+//EXPRESS SPECIFIC STUFF
+app.use('/static', express.static('static')) //For serving static files
+app.use(express.urlencoded())
 
-function togglehide(){
-    let menu = document.getElementById("menu-icon")
-    let navlist = document.getElementById("navlist");
+//PUG SPECIFIC STUFF
+app.set('view engine', 'pug') //set the template engine as pug
 
-    if(navlist.style.display != 'none'){
-        navlist.style.display = 'none';
-    }
-    else{
-        navlist.style.display = 'block';
-    }
-}
+app.set('views', path.join(__dirname, 'views')); //set the views directory
 
-const sr= ScrollReveal({
-    distance: '65px',
-    duration: 2600,
-    delay: 450,
-    reset: true
+//ENDPOINT
+
+app.get('/', (req, res)=>{
+    const params = {}
+    res.status(200).render('index.pug', params);
 })
 
-sr.reveal('.hero-text',{delay:200, origin:'top'});
-sr.reveal('.hero-img',{delay:450, origin:'top'});
-sr.reveal('.icons',{delay:500, origin:'left'});
-sr.reveal('.scroll-down',{delay:500, origin:'right'});
+// app.get('/conctact', (res,req)=>{
+//     const diva = {}
+//     res.status(200).render('contact.pug',diva);
+// })
 
-// let menu = document.querySelector('#menu-icon');
-// let navlist = document.querySelector('.navlist');
+//START THE SERVER
 
-// menu.onclick =()=>{
-//     menu.classList.toggle('bx-x')
-//     navlist.classList.toggle('open');
-// }
-
+app.listen(port, ()=>{
+    console.log(`The application started sucessfully on port ${port}`);
+});

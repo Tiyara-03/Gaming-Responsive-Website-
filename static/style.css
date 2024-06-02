@@ -195,6 +195,10 @@ section{
     transform: translateY(-5px);
 }
 
+/* .navlist .open{
+    display: none;
+} */
+
 @media (max-width: 1240px){
     header{
         padding: 15px 3%;
@@ -315,6 +319,12 @@ section{
         flex-direction: column;
         padding: 20px 20px;
         transition: all .55s ease;
+
+        /* display: none;
+        width: 300px;
+        height: 60vh;
+        background:#bec0de ; */
+
     }
 
     .navlist a{
@@ -326,6 +336,7 @@ section{
 
     .navlist .open{
         right: 0;
+        /* display: block; */
     }
 
     /* .hero-img img{
